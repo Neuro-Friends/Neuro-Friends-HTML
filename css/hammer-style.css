@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,900&display=swap');
+
+:root {
+
+  --white-text: #ffffff;
+  --black-text: #000000;
+
+  --link-color: #ffffff;
+  --link-color-hover: #ffffff;
+  --link-color-background-hover: #f5a81f;
+  --link-color-text-hover: #ffffff;
+
+  --nav-link-color: #ffffff;
+
+  --heading-color: #ffffff;
+
+  --button-background: #f5a81f;
+  --button-hover-background: #f6b238; 
+
+  --pill-color: #bf377c;
+
+  --card-background: #eaeef9;
+
+} 
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .site-title {
+    font-size: 20px;
+  }
+
+  .site-subtitle {
+    font-size: 16px;
+  }
+
+  .profile-picture {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;    
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    max-height: 350px;
+    overflow-y: scroll;
+  }
+
+  .neuro-header-text {
+    max-width: 50%;
+  }
+  .neuro-header-text h1 {
+    font-size: 48px;
+  }
+
+}
+
+/* Reset CSS */
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: #333;
+} 
+
+h1, h2, h3, h4 {
+  color: #132e41;
+  font-weight: 800; 
+}
+
+.site-info h2 {
+  font-weight: 700;
+  color: #132e41;
+}
+
+.logo img {
+  height: 100%; 
+  width: 300px;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.site-subtitle {
+  font-size: 14px;
+  color: #888888;
+}
+
+/* Buttons */
+
+.btn-primary {
+  background-color: var(--button-background);
+  border: 0px;
+  font-weight: bold;
+  color: var(--black-text) !important; 
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-background);
+  border: 0px;
+  font-weight: bold;
+  color: var(--black-text) !important; 
+}
+
+.btn-neuro {
+  background-color: #F3A71D;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  color: white;
+}
+
+.btn-neuro:hover {
+  background-color: #F3A71D;
+  opacity: 0.8;
+  color: white;
+}
+
+/* Navigation */
+
+a.nav-link {
+  color: var(--nav-link-color);
+}
+
+a:visited.nav-link {
+  color: var(--nav-link-color);
+}
+
+.nav-link {
+  color: var(--nav-link-color);
+  font-weight: 600;
+}
+
+.nav-link:last-child {
+  margin-right: 10px;
+}
+
+span.nav-link.active {
+  color: var(--nav-link-color);
+}
+
+.nav-link:hover {
+  background-color: var(--link-color-background-hover) !important;
+  border-radius: 5px;
+  color: var(--black-text) !important;
+  text-decoration: none !important;
+}
+
+.menu-left-footer-container a { 
+  color: var(--nav-link-color);
+}
+
+.menu-left-footer-container a:hover { 
+  color: var(--link-color-background-hover);
+}
+
+.menu-right-footer-container a { 
+  color: var(--nav-link-color);
+}
+
+.menu-right-footer-container a:hover { 
+  color: var(--link-color-background-hover);
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Home Page Cards */
+
+.content-card {
+  background-color: #E8EDEE;
+  width: 18rem;
+  padding: 20px;
+}
+
+.blog-meta {
+  color: var(--heading-color);
+  margin-bottom: 10px;
+}
+  
+.author,
+.publish-date {
+  margin-right: 10px;
+}
+
+.thumbnail {
+  float: right;
+  border-radius: 5px;
+  width: 100px;
+  margin: 0 0 10px 10px;
+}
+  
+.excerpt {
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: #005EB8;
+}
+
+a.tag-link {
+  color: var(--white-text);
+  text-decoration: none;
+}
+
+a.tag-link:hover {
+  color: var(--link-color-hover);
+  text-decoration: underline;
+}
+
+.blog-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--pill-color);
+  color: var(--white-text);
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+a.custom-category-pill {
+
+  top: 10px;
+  left: 10px;
+  background-color: var(--pill-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+a:hover.custom-category-pill {
+
+  top: 10px;
+  left: 10px;
+  background-color: var(--pill-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: underline;
+}
+
+a:visited.custom-category-pill {
+
+  top: 10px;
+  left: 10px;
+  background-color: var(--pill-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.custom-card {
+  border-radius: 0px;
+  border: 0px;
+  background-color: var(--card-background);
+  min-height: 20vh;
+  overflow: hidden; /* Ensure the image doesn't overflow */
+  position: relative; /* Positioning context for the pill */
+  text-align: center;
+}
+
+a.custom-card-link {
+  text-decoration:  none;
+}
+
+.custom-card img {
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure the image covers the entire top half */
+  z-index: 1; /* Set a lower z-index than the pill to make it appear below */
+}
+
+.custom-card .card-body {
+  padding: 20px; /* Add padding to the card body */
+}
+
+.custom-card .card-title {
+  color: #333;
+}
+
+.card-direction-text {
+  margin-bottom: 0.5rem !important;
+}
+
+.blog-post a {
+  text-decoration: none;  
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+.blog-post a:visited {
+  text-decoration: none;  
+}
+
+.blog-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--heading-color)
+}
+
+a.blog-title {
+  color: var(--heading-color);
+}
+
+a:visited.blog-title {
+  color: var(--heading-color);
+}
+
+.neuro-header-image img {
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+.neuro-section {
+  background-color: #ffffff; /* Adjust this to match the background color in your image */
+  padding: 30px 0;
+  color: var(--white-text);
+}
+
+.neuro-card {
+  background-color: #0072BC; /* Adjust this to match the card background color in your image */
+  border: none;
+  padding: 20px;
+}
+
+.neuro-card {
+  border-radius: 0%;
+}
+
+.neuro-next-card {
+  background-color: green; /* Adjust this to match the card background color in your image */
+  border: none;
+  padding: 20px;
+}
+.neuro-next-card {
+  border-radius: 0%;
+}
+
+.neuro-date-card {
+  background-color: #0072BC; /* Adjust this to match the card background color in your image */
+  border: none;
+  padding: 20px;
+  flex: 1 1 30%;
+  margin-bottom: 1rem;
+}
+
+.neuro-date-card {
+  border-radius: 0%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Space between cards */
+}
+
+.custom-card {
+  border-radius: 0px;
+  border: 0px;
+  background-color: var(--card-background);
+  min-height: 20vh;
+  overflow: hidden; /* Ensure the image doesn't overflow */
+  position: relative; /* Positioning context for the pill */
+  text-align: center;
+}
+
+.custom-card img {
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure the image covers the entire top half */
+  z-index: 1; /* Set a lower z-index than the pill to make it appear below */
+}
+
+.custom-card .card-body {
+  padding: 20px; /* Add padding to the card body */
+}
+
+.custom-card .card-title {
+  color: #333;
+}
+
+.custom-card .card-text {
+  color: var(--card-text);
+}
+
+.card-text a {
+  color: var(--link-color);
+}
+
+.card-text a:hover {
+  color: var(--link-color-background-hover);
+}
+
+.card-body p {
+  color: var(--white-text);
+}
+
+.custom-pill {
+  position: absolute;
+  font-size: 1.0rem;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background-color: var(--pill-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+a.cat-pills {
+  font-size: 0.8rem;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background-color: var(--pill-color);
+  color: #fff;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.cover-container {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.cover-track {
+  display: flex;
+  animation: scrollLeft 60s linear infinite;
+  width: 200%; /* Adjusted for seamless looping */
+}
+
+.cover-item {
+  width: 300px;
+  height: 300px;
+  margin: 8px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

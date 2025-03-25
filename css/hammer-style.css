@@ -1,3 +1,5 @@
+
+/* https://coolors.co/palette/080705-40434e-702632-912f40-fffffa */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,900&display=swap');
 
 :root {
@@ -70,8 +72,7 @@ html, body {
 }
 
 body {
-  background-color: black;
-  color: #333;
+  background-color: #080705;
 } 
 
 h1, h2, h3, h4 {
@@ -352,10 +353,19 @@ a:visited.blog-title {
   max-width: 100%;
 }
 
-.neuro-section {
-  background-color: #ffffff; /* Adjust this to match the background color in your image */
+.neuro-hammer-section {
   padding: 30px 0;
   color: var(--white-text);
+}
+
+.neuro-hammer-card {
+  background-color: #912f40; /* Adjust this to match the card background color in your image */
+  border: none;
+  padding: 20px;
+}
+
+.neuro-hammer-card {
+  border-radius: 0%;
 }
 
 .neuro-card {
@@ -373,6 +383,7 @@ a:visited.blog-title {
   border: none;
   padding: 20px;
 }
+
 .neuro-next-card {
   border-radius: 0%;
 }
@@ -498,3 +509,49 @@ a.cat-pills {
     transform: translateX(-50%);
   }
 }
+
+.jumbotron {
+  background: url('../img/wh-head.jpg') center/cover no-repeat;
+  height: 400px; /* Adjust height as needed */
+}
+
+img{ 
+  max-width:100%;
+}
+
+.gallery_box li{ 
+  width:33.333333%; 
+  max-width: 100% ; 
+  display:inline-block; 
+  float: left; 
+  text-align: center; 
+  overflow: hidden;    
+  position: relative;
+}
+
+.gallery_box{ 
+  padding:0;
+  display: flow-root;
+}
+
+.gallery_box li:nth-child(even) {
+    height: 304px;
+}
+
+.gallery_box li:nth-child(odd) {
+    height: 438px; 
+}
+
+.gallery_box .box_data{ 
+  position:absolute; top: 0; 
+  left: 0; right:0; 
+  bottom:0; 
+  color:#fff;
+}
+.gallery_box .box_data span{ 
+  position:absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  left:0; 
+  right:0; 
+  font-size:24px;}

@@ -85,6 +85,16 @@ h1, h2, h3, h4 {
   color: #132e41;
 }
 
+a.neurohammer-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a.neurohammer-link:hover {
+  color: var(--link-color-text-hover);
+  text-decoration: underline;
+}
+
 .logo img {
   height: 100%; 
   width: 300px;
@@ -488,19 +498,30 @@ a.cat-pills {
 
 .cover-track {
   display: flex;
-  animation: scrollLeft 60s linear infinite;
-  width: 200%; /* Adjusted for seamless looping */
+  align-items: center;
+  gap: 20px; /* Prevents logos from touching */
+  width: max-content; /* Allows it to be as wide as needed */
+  animation: scrollLeft 30s linear infinite;
 }
 
 .cover-item {
-  width: 300px;
-  height: 300px;
-  margin: 8px;
-  background-size: cover;
-  background-position: center;
+  min-width: 300px; /* Ensures consistency */
+  height: 100px; /* Adjust to fit different logos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
+.cover-item img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain; /* Ensures different-sized logos fit */
+  display: block;
+}
+
+/* Smooth scrolling animation */
 @keyframes scrollLeft {
   from {
     transform: translateX(0);
@@ -519,39 +540,43 @@ img{
   max-width:100%;
 }
 
-.gallery_box li{ 
-  width:33.333333%; 
-  max-width: 100% ; 
-  display:inline-block; 
-  float: left; 
-  text-align: center; 
-  overflow: hidden;    
-  position: relative;
+.gallery_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 0;
 }
 
-.gallery_box{ 
-  padding:0;
-  display: flow-root;
+.gallery_box li {
+  list-style: none;
+  overflow: hidden;
 }
 
-.gallery_box li:nth-child(even) {
-    height: 304px;
+.gallery_box li img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* Staggered Heights */
 .gallery_box li:nth-child(odd) {
-    height: 438px; 
+  grid-row: span 2;
 }
 
-.gallery_box .box_data{ 
-  position:absolute; top: 0; 
-  left: 0; right:0; 
-  bottom:0; 
-  color:#fff;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery_box {
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+  }
+
+  .gallery_box li {
+    grid-row: auto;
+  }
 }
-.gallery_box .box_data span{ 
-  position:absolute; 
-  top: 50%; 
-  transform: translateY(-50%); 
-  left:0; 
-  right:0; 
-  font-size:24px;}
+
+@media (max-width: 480px) {
+  .gallery_box {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
+

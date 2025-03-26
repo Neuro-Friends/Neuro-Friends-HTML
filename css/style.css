@@ -84,6 +84,16 @@ h1, h2, h3, h4 {
   width: 300px;
 }
 
+a.neuro-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+a.neuro-link:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
 .site-title {
   font-size: 24px;
   font-weight: bold;

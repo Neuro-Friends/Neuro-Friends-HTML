@@ -113,6 +113,20 @@ a.neurohammer-link:hover {
 
 /* Buttons */
 
+.btn-donate {
+  background-color: #ED254E;
+  border-radius: 5px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  color: white !important;
+}
+
+.btn-donate:hover {
+  background-color: #ED254E;
+  opacity: 0.8;
+  color: white;
+}
+
 .btn-primary {
   background-color: var(--button-background);
   border: 0px;
@@ -157,6 +171,13 @@ a:visited.nav-link {
 
 .nav-link:last-child {
   margin-right: 10px;
+}
+
+.nav-donate-link:hover {
+  background-color: #912F40 !important;
+  border-radius: 5px;
+  color: var(--black-text) !important;
+  text-decoration: none !important;
 }
 
 span.nav-link.active {

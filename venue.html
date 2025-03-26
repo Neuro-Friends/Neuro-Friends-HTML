@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="This page shows the venue that is used by NeuroFriends">
+    <title>Venue - NeuroFriends</title>
+    <meta name="description" content="NeuroFriends is a peer to peer safe space for all neurodivergent people." />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://neurofriends.net/venue">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -16,6 +17,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const email = "facilitators" + "@" + "neurofriends.net";
+            const emailElements = document.querySelectorAll(".facilitators-email");
+            
+            emailElements.forEach(function (element) {
+                element.href = "mailto:" + email;
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -25,12 +36,10 @@
                 <div class="container d-flex flex-wrap">
                     <nav aria-label="Logo Navigation">
                         <ul class="nav me-auto" role="navigation">
-                            <li class="nav-item text-center logo">
-                                <a href="/">
+                            <li class="nav-item text-center logo">                                
                                     <img class="pt-2 pb-2"
                                         src="img/logo.webp"
-                                        alt="NeuroFriends - Home" />
-                                </a>
+                                        alt="NeuroFriends - Home" />                            
                             </li>
                         </ul>
                     </nav>
@@ -59,8 +68,8 @@
                                     </li>
 
                                     <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/groups/neurofriendsgroup" target="_blank">Community</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="mailto:facilitators@neurofriends.net">Contact</a></li>
-                                    <li class="nav-item"><a class="nav-link nav-donate-link btn-donate" href="mailto:facilitators@neurofriends.net">Donate</a></li>
+                                    <li class="nav-item"><a class="nav-link facilitators-email">Contact</a></li>
+                                    <li class="nav-item"><a class="nav-link nav-donate-link btn-donate">Donate</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -137,7 +146,7 @@
                             </p>
                             <p class="card-text">
                                 If you have any specific access requirements, please
-                                <a href="mailto:facilitators@neurofriends.net">contact</a> a
+                                <a class="facilitators-email">contact</a> a
                                 facilitator.
                             </p>
                             <p class="text-white small">*Decaf Options Available</p>
@@ -248,7 +257,7 @@
                 
                 <h5>Contact</h5>
 
-                <a href="mailto:facilitators@neurofriends.net" class="btn btn-primary">Contact Us</a>
+                <a class="btn btn-primary facilitators-email">Contact Us</a>
                 
             </div>
             <div class="col-12 col-md-4 offset-md-1">
@@ -267,7 +276,7 @@
                 <path d="M7.38 14h9.24"></path>
             </svg>
         </a>
-        <a href="mailto:facilitators@neurofriends.net" class="social-icon" aria-label="Email">
+        <a class="social-icon facilitators-email" aria-label="Email">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16v16H4z"></path>
                 <polyline points="4 4 12 12 20 4"></polyline>
